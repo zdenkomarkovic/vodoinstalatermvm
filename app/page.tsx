@@ -107,7 +107,7 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4"
+        className="relative min-h-screen flex items-center justify-center pt-20 md:pt-24 pb-4 md:pb-16 px-4"
         style={{
           backgroundImage: "url(/hero1.jpg)",
           backgroundSize: "cover",
@@ -124,13 +124,13 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-3 md:mb-6 drop-shadow-lg">
               Vodoinstalater MVM Beograd
             </h1>
-            <p className="text-xl md:text-3xl text-white mb-4 font-semibold drop-shadow-md">
+            <p className="text-lg md:text-3xl text-white mb-2 md:mb-4 font-semibold drop-shadow-md">
               Brzo • Pouzdano • Efikasno
             </p>
-            <p className="text-lg md:text-2xl text-white mb-8 max-w-3xl mx-auto drop-shadow-md">
+            <p className="text-base md:text-2xl text-white mb-4 md:mb-8 max-w-3xl mx-auto drop-shadow-md">
               Profesionalne vodoinstalaterske usluge u Beogradu
             </p>
           </motion.div>
@@ -139,55 +139,72 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12"
+            className="flex flex-col gap-3 md:gap-6 justify-center items-center mb-4 md:mb-12"
           >
-            <Link href="tel:+381606936977">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <Phone className="w-6 h-6" />
-                060/693-6977
-              </motion.button>
-            </Link>
-            <Link href="viber://chat?number=+381606936977">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-purple-600 text-white px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <MessageCircle className="w-6 h-6" />
-                Viber
-              </motion.button>
-            </Link>
-            <Link href="https://wa.me/381606936977" target="_blank">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-green-500 text-white px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <MessageCircle className="w-6 h-6" />
-                WhatsApp
-              </motion.button>
-            </Link>
+            <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">
+              <Link href="tel:+381601330764">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-primary text-primary-foreground px-4 md:px-8 py-2 md:py-4 rounded-full text-base md:text-xl font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <Phone className="w-4 h-4 md:w-6 md:h-6" />
+                  060/1330764
+                </motion.button>
+              </Link>
+              <Link href="tel:+381606936977">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-primary text-primary-foreground px-4 md:px-8 py-2 md:py-4 rounded-full text-base md:text-xl font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <Phone className="w-4 h-4 md:w-6 md:h-6" />
+                  060/693-6977
+                </motion.button>
+              </Link>
+            </div>
+            <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">
+              <Link href="viber://chat?number=+381601330764">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-purple-600 text-white px-4 md:px-8 py-2 md:py-4 rounded-full text-base md:text-xl font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <MessageCircle className="w-4 h-4 md:w-6 md:h-6" />
+                  Viber
+                </motion.button>
+              </Link>
+              <Link href="https://wa.me/381601330764" target="_blank">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-green-500 text-white px-4 md:px-8 py-2 md:py-4 rounded-full text-base md:text-xl font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <MessageCircle className="w-4 h-4 md:w-6 md:h-6" />
+                  WhatsApp
+                </motion.button>
+              </Link>
+            </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className=" backdrop-blur-sm rounded-2xl p-3 md:p-8 max-w-2xl mx-auto "
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="backdrop-blur-sm rounded-2xl p-3 md:p-8 max-w-2xl mx-auto"
           >
-            <div className="flex items-center justify-center gap-3 mb-3">
-              <Clock className="w-8 h-8 text-primary" />
-              <h3 className="text-2xl md:text-3xl font-bold text-primary">
+            <div className="flex items-center justify-center gap-2 md:gap-3 mb-2 md:mb-3">
+              <Clock className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+              <h3 className="text-lg md:text-3xl font-bold text-primary">
                 Hitne Intervencije 0-24
               </h3>
             </div>
-            <p className="text-lg md:text-2xl font-bold text-primary">
+            <p className="text-base md:text-2xl font-bold text-primary mb-2 md:mb-3">
               Dostupni smo non-stop za sve hitne slučajeve!
             </p>
+            <div className="bg-yellow-400 text-black px-3 md:px-4 py-1 md:py-2 rounded-full text-sm md:text-xl font-extrabold inline-block">
+              ✅ DOLAZAK BESPLATAN
+            </div>
           </motion.div>
         </div>
       </section>
@@ -307,48 +324,65 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-white mb-6">Imate Problem sa Instalacijama?</h2>
-            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
+            <p className="text-xl md:text-2xl mb-4 text-primary-foreground/90">
               <span className="font-extrabold">Pozovite nas odmah </span> i
               rešićemo vaš problem brzo i efikasno!
             </p>
+            <div className="bg-yellow-400 text-black px-6 py-3 rounded-full text-lg md:text-2xl font-extrabold inline-block mb-8 shadow-lg">
+              ✅ DOLAZAK BESPLATAN ✅
+            </div>
 
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
-              <Link href="tel:+381606936977">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-primary px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <Phone className="w-6 h-6" />
-                  060/693-6977
-                </motion.button>
-              </Link>
+            <div className="flex flex-col gap-4 justify-center items-center mb-8">
+              <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <Link href="tel:+381601330764">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white text-primary px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                  >
+                    <Phone className="w-6 h-6" />
+                    060/1330764
+                  </motion.button>
+                </Link>
+                <Link href="tel:+381606936977">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white text-primary px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                  >
+                    <Phone className="w-6 h-6" />
+                    060/693-6977
+                  </motion.button>
+                </Link>
+              </div>
 
-              <Link href="viber://chat?number=+381606936977">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-purple-600 px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <MessageCircle className="w-6 h-6" />
-                  Viber
-                </motion.button>
-              </Link>
+              <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <Link href="viber://chat?number=+381601330764">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white text-purple-600 px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                  >
+                    <MessageCircle className="w-6 h-6" />
+                    Viber
+                  </motion.button>
+                </Link>
 
-              <Link href="https://wa.me/381606936977" target="_blank">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-green-600 px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <MessageCircle className="w-6 h-6" />
-                  WhatsApp
-                </motion.button>
-              </Link>
+                <Link href="https://wa.me/381601330764" target="_blank">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white text-green-600 px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                  >
+                    <MessageCircle className="w-6 h-6" />
+                    WhatsApp
+                  </motion.button>
+                </Link>
+              </div>
             </div>
             <Link
               href="mailto:vodoinstalatermvm011@gmail.com"
-              className="flex items-center justify-center gap-2 hover:text-primary transition-colors"
+              className="flex items-center justify-center gap-2 hover:text-primary transition-colors text-white"
             >
               <Mail className="w-5 h-5" />
               <span>vodoinstalatermvm011@gmail.com</span>

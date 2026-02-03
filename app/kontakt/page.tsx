@@ -46,12 +46,20 @@ export default function KontaktPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Telefon</h3>
-                    <Link
-                      href="tel:+381606936977"
-                      className="text-muted-foreground hover:text-primary transition-colors text-lg"
-                    >
-                      060/693-6977
-                    </Link>
+                    <div className="flex flex-col gap-1">
+                      <Link
+                        href="tel:+381601330764"
+                        className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
+                      >
+                        060/1330764
+                      </Link>
+                      <Link
+                        href="tel:+381606936977"
+                        className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                      >
+                        060/693-6977
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
@@ -105,14 +113,14 @@ export default function KontaktPage() {
                 </h3>
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    href="viber://chat?number=+381606936977"
+                    href="viber://chat?number=+381601330764"
                     className="flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-colors"
                   >
                     <MessageCircle className="w-5 h-5" />
                     <span className="font-semibold">Viber</span>
                   </Link>
                   <Link
-                    href="https://wa.me/381606936977"
+                    href="https://wa.me/381601330764"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition-colors"
@@ -135,10 +143,13 @@ export default function KontaktPage() {
                 <Clock className="w-8 h-8" />
                 <h3 className="text-xl font-bold">Hitne Intervencije 0-24</h3>
               </div>
-              <p className="text-primary-foreground/90">
+              <p className="text-primary-foreground/90 mb-3">
                 Za hitne slučajeve pozovite nas odmah! Dostupni smo non-stop za
                 sve hitne vodoinstalaterske potrebe.
               </p>
+              <div className="bg-yellow-400 text-black px-4 py-2 rounded-lg text-base font-extrabold inline-block">
+                ✅ DOLAZAK BESPLATAN
+              </div>
             </motion.div>
           </motion.div>
 

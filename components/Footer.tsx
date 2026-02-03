@@ -45,6 +45,13 @@ export default function Footer() {
             </h4>
             <div className="space-y-3">
               <Link
+                href="tel:+381601330764"
+                className="flex items-center gap-2 hover:text-primary transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                <span className="font-semibold">060/1330764</span>
+              </Link>
+              <Link
                 href="tel:+381606936977"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
@@ -64,14 +71,14 @@ export default function Footer() {
               </div>
               <div className="pt-2 space-y-2">
                 <Link
-                  href="viber://chat?number=+381606936977"
+                  href="viber://chat?number=+381601330764"
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <MessageCircle className="w-5 h-5 text-purple-600" />
                   <span>Viber</span>
                 </Link>
                 <Link
-                  href="https://wa.me/381606936977"
+                  href="https://wa.me/381601330764"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-primary transition-colors"

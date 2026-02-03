@@ -3,7 +3,9 @@
     "allow": [
       "Bash(mkdir:*)",
       "Bash(dir \".claude\\commands\")",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(npm run build)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []

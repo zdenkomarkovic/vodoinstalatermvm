@@ -80,12 +80,12 @@ export const whyChooseUs = [
       "Dolazak na teren za 45 minuta. Brz odziv i hitna intervencija.",
   },
   {
-    title: "Pouzdano",
-    description: "Kvalitetne usluge sa garancijom na izvedene radove",
+    title: "Besplatan Dolazak",
+    description: "Dolazak na teren je potpuno besplatan bez obaveza",
   },
   {
-    title: "Efikasno",
-    description: "Profesionalan pristup i efikasno rešavanje problema",
+    title: "Pouzdano",
+    description: "Kvalitetne usluge sa garancijom na izvedene radove",
   },
   {
     title: "Dostupno 0-24",
@@ -107,7 +107,7 @@ export const additionalInfo = [
   {
     title: "Jasna Komunikacija",
     description:
-      "Pre početka rada dogovaramo se o obimu posla i ceni. Kontakt osoba Maja Kovačević je dostupna za sva pitanja.",
+      "Pre početka rada dogovaramo se o obimu posla i ceni. Kontakt osoba Vojkan Kovačević je dostupna za sva pitanja.",
   },
 ];
 
@@ -140,7 +140,7 @@ export const faqData = [
   {
     question: "Kako se formira cena usluge?",
     answer:
-      "Pre početka rada dogovaramo se o obimu posla i ceni. Cena zavisi od vrste intervencije, potrebnih materijala i složenosti posla. Kontaktirajte nas za besplatnu procenu.",
+      "Pre početka rada dogovaramo se o obimu posla i ceni. Cena zavisi od vrste intervencije, potrebnih materijala i složenosti posla. Dolazak na teren je besplatan. Kontaktirajte nas za besplatnu procenu.",
   },
   {
     question: "Da li dajete garanciju na izvedene radove?",
@@ -155,7 +155,7 @@ export const faqData = [
   {
     question: "Kako mogu da vas kontaktiram?",
     answer:
-      "Možete nas kontaktirati telefonom na 060/693-6977, putem Vibera, WhatsApp-a ili emailom na vodoinstalatermvm011@gmail.com. Kontakt osoba Maja Kovačević je dostupna za sva pitanja.",
+      "Možete nas kontaktirati telefonom na 060/1330764 ili 060/693-6977, putem Vibera, WhatsApp-a ili emailom na vodoinstalatermvm011@gmail.com. Kontakt osoba Maja Kovačević je dostupna za sva pitanja.",
   },
   {
     question: "Šta je potrebno pripremiti pre dolaska majstora?",

@@ -19,14 +19,14 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4">
               <Image
                 src="/android-chrome-192x192.png"
-                alt="AquaPro Servis Logo"
+                alt="Vodoinstalater MVM Beograd Logo"
                 width={80}
                 height={80}
                 className="rounded-full"
               />
             </Link>
             <h3 className="text-2xl font-bold text-primary mb-4 text-left">
-              AquaPro Servis
+              Vodoinstalater MVM Beograd
             </h3>
             <p className="text-muted-foreground mb-4">
               Profesionalne vodoinstalaterske usluge u Beogradu. Brzo, pouzdano
@@ -45,18 +45,18 @@ export default function Footer() {
             </h4>
             <div className="space-y-3">
               <Link
-                href="tel:+381638257281"
+                href="tel:+381606936977"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                <span>063/825-7281</span>
+                <span>060/693-6977</span>
               </Link>
               <Link
-                href="mailto:aqvaproservis@gmail.com"
+                href="mailto:vodoinstalatermvm011@gmail.com"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>aqvaproservis@gmail.com</span>
+                <span>vodoinstalatermvm011@gmail.com</span>
               </Link>
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
@@ -64,14 +64,14 @@ export default function Footer() {
               </div>
               <div className="pt-2 space-y-2">
                 <Link
-                  href="viber://chat?number=+381638257281"
+                  href="viber://chat?number=+381606936977"
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <MessageCircle className="w-5 h-5 text-purple-600" />
                   <span>Viber</span>
                 </Link>
                 <Link
-                  href="https://wa.me/381638257281"
+                  href="https://wa.me/381606936977"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-primary transition-colors"
@@ -103,7 +103,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="/#kontakt"
+                href="/kontakt"
                 className="block hover:text-primary transition-colors"
               >
                 Kontakt
@@ -114,8 +114,8 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-center gap-2 md:gap-10 border-t-[1px] border-primary/20 pt-6">
           <p className="text-muted-foreground">
-            &copy; {new Date().getFullYear()} AquaPro Servis. Sva prava
-            zadržana.
+            &copy; {new Date().getFullYear()} Vodoinstalater MVM Beograd. Sva
+            prava zadržana.
           </p>
           <a
             href="https://www.manikamwebsolutions.com/"

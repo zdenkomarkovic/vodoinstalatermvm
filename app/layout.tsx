@@ -16,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AquaPro Servis - Vodoinstalater Beograd | Hitne Intervencije 0-24",
-  description: "AquaPro Servis - profesionalne vodoinstalaterske usluge u Beogradu. Hitne intervencije 0-24, mašinsko odgušenje kanalizacije, adaptacija kupatila, servis bojlera. Pozovite 063/825-7281",
+  title: "Vodoinstalater MVM Beograd | Hitne Intervencije 0-24",
+  description:
+    "Vodoinstalater MVM Beograd - profesionalne vodoinstalaterske usluge u Beogradu. Hitne intervencije 0-24, mašinsko odgušenje kanalizacije, adaptacija kupatila, servis bojlera. Pozovite 060/693-6977",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -27,9 +28,21 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
-  keywords: ["vodoinstalater", "beograd", "hitne intervencije", "odgušenje kanalizacije", "adaptacija kupatila", "servis bojlera", "montaža sanitarija", "zamena bojlera", "vodoinstalaterske usluge", "aquapro", "0-24"],
+  keywords: [
+    "vodoinstalater",
+    "beograd",
+    "hitne intervencije",
+    "odgušenje kanalizacije",
+    "adaptacija kupatila",
+    "servis bojlera",
+    "montaža sanitarija",
+    "zamena bojlera",
+    "vodoinstalaterske usluge",
+    "mvm",
+    "0-24",
+  ],
   alternates: {
-    canonical: "https://www.aquaproservis.rs/",
+    canonical: "https://www.vodoinstalatermvm.rs/",
   },
 };
 

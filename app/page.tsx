@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { services, whyChooseUs, statistics, testimonials } from "@/constants";
+import {
+  services,
+  whyChooseUs,
+  statistics,
+  testimonials,
+  cityAreas,
+  additionalInfo,
+  faqData,
+} from "@/constants";
 import {
   Clock,
   Settings,
@@ -32,6 +40,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
@@ -102,7 +116,7 @@ export default function Home() {
         }}
       >
         {/* Overlay for better text readability */}
-        {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-blue-800/10 backdrop-blur-sm"></div> */}
+        <div className="absolute inset-0 bg-black/30"></div>
 
         <div className="max-w-6xl mx-auto text-center relative">
           <motion.div
@@ -111,7 +125,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
-              AquaPro Servis
+              Vodoinstalater MVM Beograd
             </h1>
             <p className="text-xl md:text-3xl text-white mb-4 font-semibold drop-shadow-md">
               Brzo • Pouzdano • Efikasno
@@ -127,17 +141,17 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12"
           >
-            <Link href="tel:+381638257281">
+            <Link href="tel:+381606936977">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
               >
                 <Phone className="w-6 h-6" />
-                063/825-7281
+                060/693-6977
               </motion.button>
             </Link>
-            <Link href="viber://chat?number=+381638257281">
+            <Link href="viber://chat?number=+381606936977">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -147,7 +161,7 @@ export default function Home() {
                 Viber
               </motion.button>
             </Link>
-            <Link href="https://wa.me/381638257281" target="_blank">
+            <Link href="https://wa.me/381606936977" target="_blank">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -194,7 +208,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
             {services.map((service, index) => {
               const IconComponent = iconMap[service.icon] || Settings;
               return (
@@ -234,9 +248,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary to-primary/90">
-        <div className="max-w-6xl mx-auto">
+      {/* City Areas Section */}
+      <section className="py-20 px-4 bg-muted">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -244,23 +258,102 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4 text-white">Brojevi Govore Umesto Nas</h2>
-            <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-              Pogledajte naša dostignuća i razumećete zašto nas biraju
+            <h2 className="mb-4">Pokrivamo Ceo Beograd i Okolinu</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Bez obzira gde se nalazite, brzo stižemo na teren
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {statistics.map((stat, index) => (
-              <StatCard
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            {cityAreas.map((area, index) => (
+              <motion.div
                 key={index}
-                number={stat.number}
-                suffix={stat.suffix}
-                label={stat.label}
-                index={index}
-              />
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+              >
+                <Card className="h-full hover:shadow-lg transition-all duration-300 border-2 hover:border-primary hover:scale-105">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center gap-2 mb-2">
+                      <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+                      <CardTitle className="text-lg">
+                        Vodoinstalater {area.name}
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-sm leading-relaxed">
+                      {area.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section
+        id="kontakt"
+        className="py-20 px-4 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-white mb-6">Imate Problem sa Instalacijama?</h2>
+            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
+              <span className="font-extrabold">Pozovite nas odmah </span> i
+              rešićemo vaš problem brzo i efikasno!
+            </p>
+
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
+              <Link href="tel:+381606936977">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-primary px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <Phone className="w-6 h-6" />
+                  060/693-6977
+                </motion.button>
+              </Link>
+
+              <Link href="viber://chat?number=+381606936977">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-purple-600 px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <MessageCircle className="w-6 h-6" />
+                  Viber
+                </motion.button>
+              </Link>
+
+              <Link href="https://wa.me/381606936977" target="_blank">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-green-600 px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <MessageCircle className="w-6 h-6" />
+                  WhatsApp
+                </motion.button>
+              </Link>
+            </div>
+            <Link
+              href="mailto:vodoinstalatermvm011@gmail.com"
+              className="flex items-center justify-center gap-2 hover:text-primary transition-colors"
+            >
+              <Mail className="w-5 h-5" />
+              <span>vodoinstalatermvm011@gmail.com</span>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -274,7 +367,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="mb-4">Zašto Izabrati AquaPro Servis?</h2>
+            <h2 className="mb-4">Zašto Izabrati Vodoinstalater MVM Beograd?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Vaš pouzdan partner za sve vodoinstalaterske potrebe
             </p>
@@ -309,36 +402,70 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-16 bg-background rounded-2xl p-8 md:p-12"
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-16"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-primary text-center mb-8">
-              Dodatne Pogodnosti
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                "Iskusni majstori",
-                "Besplatna procena posla",
-                "Konkurentne cene",
-                "Viber i WhatsApp podrška",
-              ].map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                  <span className="text-lg">{benefit}</span>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {additionalInfo.map((info, index) => {
+                const icons = [Award, Shield, Users];
+                const IconComponent = icons[index];
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.15 }}
+                  >
+                    <Card className="h-full hover:shadow-lg transition-shadow border-2 hover:border-primary">
+                      <CardHeader>
+                        <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                          <IconComponent className="w-7 h-7 text-primary-foreground" />
+                        </div>
+                        <CardTitle className="text-xl">{info.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-base leading-relaxed">
+                          {info.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
       </section>
+      {/* Statistics Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-primary to-primary/90">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="mb-4 text-white">Brojevi Govore Umesto Nas</h2>
+            <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
+              Pogledajte naša dostignuća i razumećete zašto nas biraju
+            </p>
+          </motion.div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {statistics.map((stat, index) => (
+              <StatCard
+                key={index}
+                number={stat.number}
+                suffix={stat.suffix}
+                label={stat.label}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Testimonials Section */}
       <section className="py-20 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
@@ -397,64 +524,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section
-        id="kontakt"
-        className="py-20 px-4 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground"
-      >
-        <div className="max-w-4xl mx-auto text-center">
+      {/* FAQ Section */}
+      <section className="py-20 px-4 bg-muted">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center mb-16"
           >
-            <h2 className="text-white mb-6">Imate Problem sa Instalacijama?</h2>
-            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
-              Kontaktirajte nas odmah i rešićemo vaš problem brzo i efikasno!
+            <h2 className="mb-4">Često Postavljana Pitanja</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Odgovori na najčešća pitanja o našim uslugama
             </p>
+          </motion.div>
 
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
-              <Link href="tel:+381638257281">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-primary px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {faqData.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="bg-background rounded-lg border-2 px-6 hover:border-primary transition-colors"
                 >
-                  <Phone className="w-6 h-6" />
-                  063/825-7281
-                </motion.button>
-              </Link>
-
-              <Link href="viber://chat?number=+381638257281">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-purple-600 px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <MessageCircle className="w-6 h-6" />
-                  Viber
-                </motion.button>
-              </Link>
-
-              <Link href="https://wa.me/381638257281" target="_blank">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-green-600 px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <MessageCircle className="w-6 h-6" />
-                  WhatsApp
-                </motion.button>
-              </Link>
-            </div>
-            <Link
-              href="mailto:aqvaproservis@gmail.com"
-              className="flex items-center justify-center gap-2 hover:text-primary transition-colors"
-            >
-              <Mail className="w-5 h-5" />
-              <span>aqvaproservis@gmail.com</span>
-            </Link>
+                  <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed pt-2">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </motion.div>
         </div>
       </section>

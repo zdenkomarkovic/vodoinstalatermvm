@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import StructuredData from "@/components/StructuredData";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -104,6 +105,18 @@ export default function RootLayout({
     <html lang="sr">
       <head>
         <StructuredData />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17931599606"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17931599606');
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-muted-foreground bg-muted  text-base md:text-xl`}

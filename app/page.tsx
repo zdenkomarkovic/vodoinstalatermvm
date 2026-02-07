@@ -142,16 +142,6 @@ export default function Home() {
             className="flex flex-col gap-3 md:gap-6 justify-center items-center mb-4 md:mb-12"
           >
             <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">
-              <Link href="tel:+381601330764">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-primary text-primary-foreground px-4 md:px-8 py-2 md:py-4 rounded-full text-base md:text-xl font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  <Phone className="w-4 h-4 md:w-6 md:h-6" />
-                  060/1330764
-                </motion.button>
-              </Link>
               <Link href="tel:+381606936977">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -162,9 +152,19 @@ export default function Home() {
                   060/693-6977
                 </motion.button>
               </Link>
+              <Link href="tel:+381601330764">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-primary text-primary-foreground px-4 md:px-8 py-2 md:py-4 rounded-full text-base md:text-xl font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <Phone className="w-4 h-4 md:w-6 md:h-6" />
+                  060/1330764
+                </motion.button>
+              </Link>
             </div>
             <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">
-              <Link href="viber://chat?number=+381601330764">
+              <Link href="viber://chat?number=+381606936977">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -174,7 +174,7 @@ export default function Home() {
                   Viber
                 </motion.button>
               </Link>
-              <Link href="https://wa.me/381601330764" target="_blank">
+              <Link href="https://wa.me/381606936977" target="_blank">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -334,16 +334,6 @@ export default function Home() {
 
             <div className="flex flex-col gap-4 justify-center items-center mb-8">
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <Link href="tel:+381601330764">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-white text-primary px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
-                  >
-                    <Phone className="w-6 h-6" />
-                    060/1330764
-                  </motion.button>
-                </Link>
                 <Link href="tel:+381606936977">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -354,10 +344,20 @@ export default function Home() {
                     060/693-6977
                   </motion.button>
                 </Link>
+                <Link href="tel:+381601330764">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white text-primary px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                  >
+                    <Phone className="w-6 h-6" />
+                    060/1330764
+                  </motion.button>
+                </Link>
               </div>
 
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <Link href="viber://chat?number=+381601330764">
+                <Link href="viber://chat?number=+381606936977">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -368,7 +368,7 @@ export default function Home() {
                   </motion.button>
                 </Link>
 
-                <Link href="https://wa.me/381601330764" target="_blank">
+                <Link href="https://wa.me/381606936977" target="_blank">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

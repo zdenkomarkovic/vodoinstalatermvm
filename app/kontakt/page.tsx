@@ -48,16 +48,16 @@ export default function KontaktPage() {
                     <h3 className="font-semibold text-lg mb-1">Telefon</h3>
                     <div className="flex flex-col gap-1">
                       <Link
-                        href="tel:+381601330764"
+                        href="tel:+381606936977"
                         className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
                       >
-                        060/1330764
+                        060/693-6977
                       </Link>
                       <Link
-                        href="tel:+381606936977"
+                        href="tel:+381601330764"
                         className="text-muted-foreground hover:text-primary transition-colors text-lg"
                       >
-                        060/693-6977
+                        060/1330764
                       </Link>
                     </div>
                   </div>
@@ -96,9 +96,7 @@ export default function KontaktPage() {
                     <Clock className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">
-                      Radno Vreme
-                    </h3>
+                    <h3 className="font-semibold text-lg mb-1">Radno Vreme</h3>
                     <p className="text-muted-foreground">
                       Dostupni 24/7 - Hitne intervencije
                     </p>

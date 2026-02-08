@@ -194,12 +194,12 @@ export default function Home() {
             className="backdrop-blur-sm rounded-2xl p-3 md:p-8 max-w-2xl mx-auto"
           >
             <div className="flex items-center justify-center gap-2 md:gap-3 mb-2 md:mb-3">
-              <Clock className="w-6 h-6 md:w-8 md:h-8 text-primary" />
-              <h3 className="text-lg md:text-3xl font-bold text-primary">
+              <Clock className="w-6 h-6 md:w-8 md:h-8 text-muted" />
+              <h3 className="text-lg md:text-3xl font-bold text-muted">
                 Hitne Intervencije 0-24
               </h3>
             </div>
-            <p className="text-base md:text-2xl font-bold text-primary mb-2 md:mb-3">
+            <p className="text-base md:text-2xl font-bold text-muted mb-2 md:mb-3">
               Dostupni smo non-stop za sve hitne slučajeve!
             </p>
             <div className="bg-yellow-400 text-black px-3 md:px-4 py-1 md:py-2 rounded-full text-sm md:text-xl font-extrabold inline-block">

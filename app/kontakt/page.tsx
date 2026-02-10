@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import PhoneLink from "@/components/PhoneLink";
 
 export default function KontaktPage() {
   return (
@@ -47,18 +48,18 @@ export default function KontaktPage() {
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Telefon</h3>
                     <div className="flex flex-col gap-1">
-                      <Link
+                      <PhoneLink
                         href="tel:+381606936977"
                         className="text-muted-foreground hover:text-primary transition-colors text-lg font-semibold"
                       >
                         060/693-6977
-                      </Link>
-                      <Link
+                      </PhoneLink>
+                      <PhoneLink
                         href="tel:+381601330764"
                         className="text-muted-foreground hover:text-primary transition-colors text-lg"
                       >
                         060/1330764
-                      </Link>
+                      </PhoneLink>
                     </div>
                   </div>
                 </div>
@@ -110,14 +111,14 @@ export default function KontaktPage() {
                   Kontaktirajte nas putem
                 </h3>
                 <div className="flex flex-wrap gap-4">
-                  <Link
+                  <PhoneLink
                     href="viber://chat?number=+381601330764"
                     className="flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-colors"
                   >
                     <MessageCircle className="w-5 h-5" />
                     <span className="font-semibold">Viber</span>
-                  </Link>
-                  <Link
+                  </PhoneLink>
+                  <PhoneLink
                     href="https://wa.me/381601330764"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -125,7 +126,7 @@ export default function KontaktPage() {
                   >
                     <MessageCircle className="w-5 h-5" />
                     <span className="font-semibold">WhatsApp</span>
-                  </Link>
+                  </PhoneLink>
                 </div>
               </div>
             </div>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Logo from "../public/android-chrome-192x192.png";
 import Link from "next/link";
+import PhoneLink from "@/components/PhoneLink";
 import { MenuIcon, PhoneIcon } from "lucide-react";
 
 import {
@@ -101,7 +102,7 @@ export default function Header() {
         </Link>
         <DesktopNav />
         <div className="flex flex-col gap-1">
-          <Link href="tel:+381606936977">
+          <PhoneLink href="tel:+381606936977">
             <motion.button
               whileHover={{
                 color: "hsl(var(--foreground))",
@@ -112,7 +113,7 @@ export default function Header() {
               <PhoneIcon className="w-4 h-4 md:w-5 md:h-5" />
               <p className="">060/6936977</p>
             </motion.button>
-          </Link>
+          </PhoneLink>
         </div>
         <MobileMenu />
       </nav>

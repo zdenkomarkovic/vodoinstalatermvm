@@ -117,6 +117,24 @@ export default function RootLayout({
             gtag('config', 'AW-17931599606');
           `}
         </Script>
+        <Script id="gtag-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17931599606/pu0YCPWasfYbEPb9ueZC',
+                'value': 1.0,
+                'currency': 'RSD',
+                'event_callback': callback
+              });
+              return false;
+            }
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-muted-foreground bg-muted  text-base md:text-xl`}

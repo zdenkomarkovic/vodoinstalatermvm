@@ -33,6 +33,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import PhoneLink from "@/components/PhoneLink";
 import {
   Card,
   CardContent,
@@ -142,7 +143,7 @@ export default function Home() {
             className="flex flex-col gap-3 md:gap-6 justify-center items-center mb-4 md:mb-12"
           >
             <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">
-              <Link href="tel:+381606936977">
+              <PhoneLink href="tel:+381606936977">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -151,8 +152,8 @@ export default function Home() {
                   <Phone className="w-4 h-4 md:w-6 md:h-6" />
                   060/693-6977
                 </motion.button>
-              </Link>
-              <Link href="tel:+381601330764">
+              </PhoneLink>
+              <PhoneLink href="tel:+381601330764">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -161,10 +162,10 @@ export default function Home() {
                   <Phone className="w-4 h-4 md:w-6 md:h-6" />
                   060/1330764
                 </motion.button>
-              </Link>
+              </PhoneLink>
             </div>
             <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center items-center">
-              <Link href="viber://chat?number=+381606936977">
+              <PhoneLink href="viber://chat?number=+381606936977">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -173,8 +174,8 @@ export default function Home() {
                   <MessageCircle className="w-4 h-4 md:w-6 md:h-6" />
                   Viber
                 </motion.button>
-              </Link>
-              <Link href="https://wa.me/381606936977" target="_blank">
+              </PhoneLink>
+              <PhoneLink href="https://wa.me/381606936977" target="_blank" rel="noopener noreferrer">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -183,7 +184,7 @@ export default function Home() {
                   <MessageCircle className="w-4 h-4 md:w-6 md:h-6" />
                   WhatsApp
                 </motion.button>
-              </Link>
+              </PhoneLink>
             </div>
           </motion.div>
 
@@ -334,7 +335,7 @@ export default function Home() {
 
             <div className="flex flex-col gap-4 justify-center items-center mb-8">
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <Link href="tel:+381606936977">
+                <PhoneLink href="tel:+381606936977">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -343,8 +344,8 @@ export default function Home() {
                     <Phone className="w-6 h-6" />
                     060/693-6977
                   </motion.button>
-                </Link>
-                <Link href="tel:+381601330764">
+                </PhoneLink>
+                <PhoneLink href="tel:+381601330764">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -353,11 +354,11 @@ export default function Home() {
                     <Phone className="w-6 h-6" />
                     060/1330764
                   </motion.button>
-                </Link>
+                </PhoneLink>
               </div>
 
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <Link href="viber://chat?number=+381606936977">
+                <PhoneLink href="viber://chat?number=+381606936977">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -366,9 +367,9 @@ export default function Home() {
                     <MessageCircle className="w-6 h-6" />
                     Viber
                   </motion.button>
-                </Link>
+                </PhoneLink>
 
-                <Link href="https://wa.me/381606936977" target="_blank">
+                <PhoneLink href="https://wa.me/381606936977" target="_blank" rel="noopener noreferrer">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -377,7 +378,7 @@ export default function Home() {
                     <MessageCircle className="w-6 h-6" />
                     WhatsApp
                   </motion.button>
-                </Link>
+                </PhoneLink>
               </div>
             </div>
             <Link

@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import PhoneLink from "@/components/PhoneLink";
 import Image from "next/image";
 
 export default function Footer() {
@@ -44,20 +45,20 @@ export default function Footer() {
               Kontakt
             </h4>
             <div className="space-y-3">
-              <Link
+              <PhoneLink
                 href="tel:+381606936977"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 <span className="font-semibold">060/693-6977</span>
-              </Link>
-              <Link
+              </PhoneLink>
+              <PhoneLink
                 href="tel:+381601330764"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 <span>060/1330764</span>
-              </Link>
+              </PhoneLink>
               <Link
                 href="mailto:vodoinstalatermvm011@gmail.com"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
@@ -70,14 +71,14 @@ export default function Footer() {
                 <span>Beograd</span>
               </div>
               <div className="pt-2 space-y-2">
-                <Link
+                <PhoneLink
                   href="viber://chat?number=+381606936977"
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <MessageCircle className="w-5 h-5 text-purple-600" />
                   <span>Viber</span>
-                </Link>
-                <Link
+                </PhoneLink>
+                <PhoneLink
                   href="https://wa.me/381606936977"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -85,7 +86,7 @@ export default function Footer() {
                 >
                   <MessageCircle className="w-5 h-5 text-green-600" />
                   <span>WhatsApp</span>
-                </Link>
+                </PhoneLink>
               </div>
             </div>
           </div>

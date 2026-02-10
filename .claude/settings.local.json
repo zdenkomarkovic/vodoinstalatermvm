@@ -5,7 +5,8 @@
       "Bash(dir \".claude\\commands\")",
       "Bash(ls:*)",
       "Bash(npm run build)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(dir \"E:\\\\Sajtovi\\\\1-2026\\\\vodoinstalatermvm\")"
     ],
     "deny": [],
     "ask": []

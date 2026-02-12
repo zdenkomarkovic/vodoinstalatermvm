@@ -105,6 +105,10 @@ export default function RootLayout({
     <html lang="sr">
       <head>
         <StructuredData />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-muted-foreground bg-muted  text-base md:text-xl`}
+      >
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17931599606"
           strategy="afterInteractive"
@@ -135,10 +139,6 @@ export default function RootLayout({
             }
           `}
         </Script>
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-muted-foreground bg-muted  text-base md:text-xl`}
-      >
         <Header />
         {children}
         <ButtonToTop />
